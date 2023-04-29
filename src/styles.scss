@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:host {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
+@media (min-width: 640px) {
+  :host {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  :host {
+    max-width: 768px;
+  }
+
+  body {
+    overflow-y: scroll;
+    scrollbar-width: thin; /* pour rendre la barre de défilement plus fine */
+    scrollbar-color: #4a5568 #f7fafc; /* pour donner une couleur à la barre de défilement */
+  }
+}
+
+@media (min-width: 1024px) {
+  :host {
+    max-width: 1024px;
+  }
+}
