@@ -18,6 +18,10 @@ export class NavComponent {
     this.darkModeEnabled$.pipe(takeUntil(this.unsubscribe$));
   }
 
+  selectedLanguage(language: string): void {
+    console.log(`Language changed to ${language}`);
+  }
+
   ngOnDestroy(): void {
     this.unsubscribe$.next(true);
     this.unsubscribe$.complete();
